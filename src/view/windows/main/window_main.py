@@ -1,4 +1,5 @@
 import customtkinter as ctk
+import sys
 
 from src.view.win_settings import center_window
 from src.view.localization import Localization
@@ -15,12 +16,10 @@ class MainWindow(ctk.CTk):
         self._control_api.db_connect()
 
         # window settings =====================================================
-        ctk.set_appearance_mode("dark")
-        ctk.set_default_color_theme("blue")
+        self._init_gui()
         self._win_width = 640  # 600
         self._win_height = 395  # 350
         center_window(self, self._win_width, self._win_height)
-        self._init_gui()
 
         # grid layout 1x2 =====================================================
         self.grid_rowconfigure(0, weight=1)
@@ -45,9 +44,22 @@ class MainWindow(ctk.CTk):
 
     @staticmethod
     def _init_gui():
-        ctk.deactivate_automatic_dpi_awareness()
-        # self.tk.call('tk', 'scaling', 2.0)
-        # ctypes.windll.shcore.SetProcessDpiAwareness(2)
+        """CustomTkinter supports DPI aware for Windows, but Tkinter does not.
+        Because of this, tables implemented using ttk.Treeview does not scale
+        with the rest of the GUI. Therefore for Windows DPI aware is disabled.
+
+        DPI aware on macOS works automatically. But the tests were not
+        carried out, perhaps there are problems there.
+
+        DPI aware on Linux not implemented."""
+
+        ctk.set_appearance_mode("dark")
+        ctk.set_default_color_theme("blue")
+
+        if sys.platform.startswith("win"):
+            ctk.deactivate_automatic_dpi_awareness()
+            # self.tk.call('tk', 'scaling', 2.0)
+            # ctypes.windll.shcore.SetProcessDpiAwareness(2)
 
     def _select_houses_frame(self):
         self._select_frame_by_navigation("HOUSES")
