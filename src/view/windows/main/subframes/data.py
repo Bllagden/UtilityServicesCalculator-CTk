@@ -31,12 +31,19 @@ class DataFrame(ctk.CTkFrame):
         self._scroll = None
         self._create_scroll()
 
-        # button ==============================================================
+        # button or label =====================================================
+        self._bottom_frame = None
+        self._create_bottom_frame()
+
         if self._frame_type == "HOUSES":
-            self._btn_frame = None
             self.btn_open = None
             self.text_open_btn = ctk.StringVar()
             self._create_btn()
+
+        elif self._frame_type == "TARIFFS":
+            self.label_note = None
+            self.text_note_label = ctk.StringVar()
+            self._create_label()
 
     def _create_table(self):
         if self._frame_type == "HOUSES":
@@ -52,12 +59,18 @@ class DataFrame(ctk.CTkFrame):
         self._scroll.grid(row=0, column=1, sticky="nsew")
         self.table.configure(yscrollcommand=self._scroll.set)
 
+    def _create_bottom_frame(self):
+        self._bottom_frame = ctk.CTkFrame(self, corner_radius=0, border_width=0)
+        self._bottom_frame.grid(row=1, column=0, columnspan=2, sticky="nsew")
+
     def _create_btn(self):
-        self._btn_frame = ctk.CTkFrame(self,
-                                       corner_radius=0,
-                                       border_width=0,
-                                       height=80)
-        self._btn_frame.grid(row=1, column=0, columnspan=2, sticky="nsew")
-        self.btn_open = ctk.CTkButton(self._btn_frame,
+        """for HOUSES"""
+        self.btn_open = ctk.CTkButton(self._bottom_frame,
                                       textvariable=self.text_open_btn)
         self.btn_open.pack(pady=(9, 9))
+
+    def _create_label(self):
+        """for TARIFFS"""
+        self.label_note = ctk.CTkLabel(self._bottom_frame,
+                                       textvariable=self.text_note_label)
+        self.label_note.pack(pady=(9, 9))

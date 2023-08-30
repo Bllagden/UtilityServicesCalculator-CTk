@@ -13,6 +13,7 @@ LANG_MAIN_WIN = {
         "label_house_desc": text.label_house_desc_ru,
         "label_tariff_type": text.label_tariff_type_ru,
         "label_tariff_value": text.label_tariff_value_ru,
+        "label_tariff_note": text.label_tariff_note_ru,
         "meter_types": text.meter_types_ru
     },
 
@@ -28,6 +29,7 @@ LANG_MAIN_WIN = {
         "label_house_desc": text.label_house_desc_eng,
         "label_tariff_type": text.label_tariff_type_eng,
         "label_tariff_value": text.label_tariff_value_eng,
+        "label_tariff_note": text.label_tariff_note_eng,
         "meter_types": text.meter_types_eng
     }
 }

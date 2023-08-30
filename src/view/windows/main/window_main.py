@@ -107,6 +107,8 @@ class MainWindow(ctk.CTk):
         self._tariffs.data.table.tariff_types = localiz["meter_types"]
         self._tariffs.data.table.update_tab()
 
+        self._tariffs.data.text_note_label.set(localiz["label_tariff_note"])
+
         # tariff menu =========================================================
         self._tariffs.menu.text_label_menu.set(localiz["label_create_delete"])
 
