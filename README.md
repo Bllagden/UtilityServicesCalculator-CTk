@@ -29,5 +29,5 @@
 ### House Window: Garbage
 ![](documentation_images/house_window_garb.jpg)
 
-## Installation
-python>=3.7.6 (lower versions not tested)
+## Settings
+`python>=3.7.6` (lower versions not tested)
