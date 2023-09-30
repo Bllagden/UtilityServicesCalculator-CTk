@@ -1,7 +1,8 @@
 import sqlite3 as sl
 from typing import List, Tuple, Union, Optional
 
-from .db_settings import DB_DEFAULT_PATH, DB_DEFAULT_NAME
+from .db_settings import (DB_DEFAULT_PATH, DB_NON_DEFAULT_PATH,
+                          DB_DEFAULT_NAME, DB_NON_DEFAULT_NAME)
 
 
 class Database:
@@ -12,14 +13,17 @@ class Database:
     Docstrings for queries methods are in the 'DatabaseOperations' class."""
 
     def __init__(self):
-        self.path = DB_DEFAULT_PATH
-        self.name = DB_DEFAULT_NAME
+        self.path_default = DB_DEFAULT_PATH
+        self.path_non_default = DB_NON_DEFAULT_PATH
+        self.name_default = DB_DEFAULT_NAME
+        self.name_non_default = DB_NON_DEFAULT_NAME
 
     def __enter__(self):
         try:
-            self.conn = sl.connect(self.path + self.name)
+            self.conn = sl.connect(self.path_default + self.name_default)
         except sl.OperationalError:
-            self.conn = sl.connect(self.name)
+            self.conn = sl.connect(self.name_non_default)
+            self.path_non_default = "root/"
         self.curs = self.conn.cursor()
         return self
 

@@ -18,10 +18,19 @@ class DatabaseOperations:
     def first_connect():
         """The first connection to the DB while the program is running.
         Creates a DB if it does not already exist.
-        Returns the path and name of the DB."""
-        path, name = "", ""
+        Returns the path and name of the DB.
+
+        If the program is launched from the src directory:
+            path: 'root/src/model/database/'
+            name: 'DEFAULT.db'
+        If the program is launched from the root directory:
+            path: 'root/'
+            name: 'NON-DEFAULT.db'
+        """
         with Database() as db:
-            path, name = db.path, db.name
+            path, name = db.path_non_default, db.name_non_default
+            if not path:
+                path, name = "root/src/" + db.path_default, db.name_default
         return path, name
 
     def get_db_tab_names(self) -> List[str]:

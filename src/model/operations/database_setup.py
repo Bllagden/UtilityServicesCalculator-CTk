@@ -19,9 +19,18 @@ class DatabaseSetup:
         self._check_db()
 
     def _first_connect(self):
-        """This is where the DB is created if it doesn't exist."""
+        """
+        If the program is launched from the src directory:
+            path: 'root/src/model/database/'
+            name: 'DEFAULT.db'
+
+        If the program is launched from the root directory:
+            path: 'root/'
+            name: 'NON-DEFAULT.db'
+        """
         self._path, self._name = DatabaseOperations.first_connect()
-        print(f"connect to: {self._path + self._name}")
+        print("==================================================")
+        print(f"Connection to: {self._path + self._name}")
 
     def _check_db(self):
         """Checking if a new DB exists (it doesn't have a 'valid_db' table).
@@ -29,10 +38,11 @@ class DatabaseSetup:
         self._tabs = DatabaseOperations().get_db_tab_names()
 
         if "valid_db" not in self._tabs:
-            print("_new_db")
+            print("New database")
             self._initial_setup()
         else:
-            print("_regular_db")
+            print("Existing database")
+        print("==================================================")
 
     @staticmethod
     def _initial_setup():

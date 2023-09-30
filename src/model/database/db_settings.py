@@ -1,2 +1,4 @@
-DB_DEFAULT_PATH = "../src/model/database/"
+DB_DEFAULT_PATH = "model/database/"
+DB_NON_DEFAULT_PATH = ""
 DB_DEFAULT_NAME = "DEFAULT.db"
+DB_NON_DEFAULT_NAME = "NON-DEFAULT.db"
