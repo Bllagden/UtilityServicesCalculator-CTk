@@ -1,6 +1,6 @@
 import customtkinter as ctk
 
-from src.view.win_settings import IsValid
+from view.win_settings import IsValid
 
 from .table_houses import HousesTableWidget
 from .table_tariffs import TariffsTableWidget

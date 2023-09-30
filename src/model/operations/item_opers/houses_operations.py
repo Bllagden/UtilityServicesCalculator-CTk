@@ -1,8 +1,8 @@
 from typing import List, Tuple, Optional
 
-from src.model.database import DatabaseOperations
-from src.model.sql_builders import SQLBuilderDelHouse
-from src.model.sql import SQL
+from model.database import DatabaseOperations
+from model.sql_builders import SQLBuilderDelHouse
+from model.sql import SQL
 
 from .item_operations import ItemOperations
 

@@ -1,6 +1,6 @@
 from typing import List, Tuple, Union, Optional
 
-from src.model.sql import SQL
+from model.sql import SQL
 
 from .database import Database
 

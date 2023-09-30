@@ -1,7 +1,7 @@
 import customtkinter as ctk
 from typing import Tuple
 
-from src.view.win_settings import IsValid
+from view.win_settings import IsValid
 
 
 class MonthsLabelsFrame(ctk.CTkFrame):

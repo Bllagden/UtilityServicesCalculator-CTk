@@ -1,10 +1,10 @@
 import customtkinter as ctk
 from typing import List, Tuple, Optional
 
-from src.controller import ControllerAPI
-from src.view.win_settings import center_window
-from src.view.localization import Localization
-from src.view.windows import MessageBox
+from controller import ControllerAPI
+from view.win_settings import center_window
+from view.localization import Localization
+from view.windows import MessageBox
 
 from .base_frame_years_menu import YearsMenuBaseFrame
 from .base_frame_meter_readings import MeterReadingsBaseFrame

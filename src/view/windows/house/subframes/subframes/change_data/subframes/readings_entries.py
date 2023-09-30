@@ -1,7 +1,7 @@
 import customtkinter as ctk
 from typing import List
 
-from src.view.win_settings import IsValid
+from view.win_settings import IsValid
 
 
 class ReadingsEntriesFrame(ctk.CTkFrame):

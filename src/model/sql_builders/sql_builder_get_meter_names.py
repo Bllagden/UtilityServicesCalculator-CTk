@@ -1,6 +1,6 @@
 from typing import List, Tuple
 
-from src.model.sql import SQL
+from model.sql import SQL
 
 from .sql_builder import SQLBuilder
 

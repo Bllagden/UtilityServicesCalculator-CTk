@@ -1,6 +1,6 @@
 import customtkinter as ctk
 
-from src.view.win_settings import center_window
+from view.win_settings import center_window
 
 
 class MessageBox(ctk.CTkToplevel):

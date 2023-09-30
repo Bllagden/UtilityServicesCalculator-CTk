@@ -1,8 +1,8 @@
 import customtkinter as ctk
 
-from src.controller import ControllerAPI
-from src.view.win_settings import center_window
-from src.view.localization import Localization
+from controller import ControllerAPI
+from view.win_settings import center_window
+from view.localization import Localization
 
 from .base_frame_data import DataBaseFrame
 from .base_frame_menu import MenuBaseFrame

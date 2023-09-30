@@ -1,16 +1,16 @@
 from typing import List, Tuple, Optional
 
-from src.model import DatabaseSetup
-from src.model import GetSetLanguage
+from model import DatabaseSetup
+from model import GetSetLanguage
 # item operations
-from src.model import HousesOperations
-from src.model import TariffsOperations
-from src.model import YearsOperations
-from src.model import MetersOperations
+from model import HousesOperations
+from model import TariffsOperations
+from model import YearsOperations
+from model import MetersOperations
 # meter readings operations
-from src.model import GetMeterReadings
-from src.model import CalculationElecWatGas
-from src.model import CalculationGarb
+from model import GetMeterReadings
+from model import CalculationElecWatGas
+from model import CalculationGarb
 
 from .converter_readings import ConverterReadings
 from .converter_tariffs import ConverterTariffs

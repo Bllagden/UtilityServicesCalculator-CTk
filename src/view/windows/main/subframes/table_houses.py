@@ -1,6 +1,6 @@
 from typing import Tuple, Optional
 
-from src.view.table_widget import TableMasterWidget
+from view.table_widget import TableMasterWidget
 
 
 class HousesTableWidget(TableMasterWidget):

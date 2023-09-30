@@ -1,7 +1,7 @@
 from typing import List, Tuple, Optional
 
-from src.view.table_widget import TableMasterWidget
-from src.view.table_widget import TableStyles
+from view.table_widget import TableMasterWidget
+from view.table_widget import TableStyles
 
 
 class GarbageTableWidget(TableMasterWidget):

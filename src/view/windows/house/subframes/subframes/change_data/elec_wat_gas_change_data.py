@@ -1,7 +1,7 @@
 import customtkinter as ctk
 from typing import Tuple
 
-from src.controller import ControllerAPI
+from controller import ControllerAPI
 
 from .subframes import MonthsLabelsFrame
 from .subframes import ReadingsEntriesFrame

@@ -1,8 +1,8 @@
 import customtkinter as ctk
 from typing import List, Tuple, Dict, Optional
 
-from src.controller import ControllerAPI
-from src.view.windows import MessageBox
+from controller import ControllerAPI
+from view.windows import MessageBox
 
 from .subframes import MetersMenuFrame
 from .subframes import TitleFrame

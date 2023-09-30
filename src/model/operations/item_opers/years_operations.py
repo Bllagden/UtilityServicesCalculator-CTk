@@ -1,9 +1,9 @@
 from typing import List, Tuple, Union, Optional
 
-from src.model.database import DatabaseOperations
-from src.model.sql_builders import SQLBuilderAddYear
-from src.model.sql_builders import SQLBuilderDelYear
-from src.model.sql import SQL
+from model.database import DatabaseOperations
+from model.sql_builders import SQLBuilderAddYear
+from model.sql_builders import SQLBuilderDelYear
+from model.sql import SQL
 
 from .item_operations import ItemOperations
 

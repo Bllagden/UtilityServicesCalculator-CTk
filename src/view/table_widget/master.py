@@ -1,7 +1,7 @@
 from tkinter import ttk
 from typing import List, Tuple, Dict
 
-from src.controller import ControllerAPI
+from controller import ControllerAPI
 from .styles import TableStyles
 from .sorts import TableSorts
 

@@ -1,8 +1,8 @@
 import customtkinter as ctk
 import sys
 
-from src.view.win_settings import center_window
-from src.view.localization import Localization
+from view.win_settings import center_window
+from view.localization import Localization
 
 from .base_frame_navigation import NavigationBaseFrame
 from .base_frame_houses import HousesBaseFrame

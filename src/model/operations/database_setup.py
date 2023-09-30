@@ -1,7 +1,7 @@
 from typing import List, Tuple, Union
 
-from src.model.database import DatabaseOperations
-from src.model.sql_builders import SQLBuilderDBFirstConfigure
+from model.database import DatabaseOperations
+from model.sql_builders import SQLBuilderDBFirstConfigure
 
 
 class DatabaseSetup:

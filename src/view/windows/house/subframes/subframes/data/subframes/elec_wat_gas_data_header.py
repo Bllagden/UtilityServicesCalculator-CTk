@@ -1,6 +1,6 @@
 import customtkinter as ctk
 
-from src.controller import ControllerAPI
+from controller import ControllerAPI
 
 
 class ElecWaterGasDataHeaderFrame(ctk.CTkFrame):

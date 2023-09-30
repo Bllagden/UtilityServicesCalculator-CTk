@@ -1,8 +1,8 @@
 import customtkinter as ctk
 from typing import List, Dict, Optional
 
-from src.view.windows import MessageBox
-from src.view.windows import MetersWindow
+from view.windows import MessageBox
+from view.windows import MetersWindow
 
 
 class MetersMenuFrame(ctk.CTkFrame):

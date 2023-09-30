@@ -1,8 +1,8 @@
 import customtkinter as ctk
 from typing import Optional
 
-from src.view.localization import Localization
-from src.view.windows import MessageBox
+from view.localization import Localization
+from view.windows import MessageBox
 
 
 class MenuBaseFrame(ctk.CTkFrame):

@@ -1,7 +1,7 @@
 from typing import List, Tuple
 
-from src.model.database import DatabaseOperations
-from src.model.sql import SQL
+from model.database import DatabaseOperations
+from model.sql import SQL
 
 
 class GetSetLanguage:

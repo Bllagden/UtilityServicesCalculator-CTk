@@ -1,7 +1,7 @@
 import customtkinter as ctk
 from typing import List, Tuple, Dict, Optional
 
-from src.view.windows import MessageBox
+from view.windows import MessageBox
 
 from .subframes import DataFrame
 from .subframes import MenuFrame

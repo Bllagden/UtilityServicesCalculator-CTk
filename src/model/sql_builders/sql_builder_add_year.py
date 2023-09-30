@@ -1,6 +1,6 @@
 from typing import List, Tuple, Union
 
-from src.model.sql import SQL
+from model.sql import SQL
 
 from .sql_builder import SQLBuilder
 from .sql_builder_tab_names import SQLBuilderTabNames

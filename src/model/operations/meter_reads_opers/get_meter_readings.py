@@ -1,7 +1,7 @@
 from typing import List, Tuple, Optional
 
-from src.model.database import DatabaseOperations
-from src.model.sql_builders import SQLBuilderGetReads
+from model.database import DatabaseOperations
+from model.sql_builders import SQLBuilderGetReads
 
 
 class GetMeterReadings:

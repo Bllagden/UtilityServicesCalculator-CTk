@@ -1,8 +1,8 @@
 import customtkinter as ctk
 from typing import Tuple, Dict, Optional
 
-from src.view.windows import MessageBox
-from src.view.windows import HouseWindow
+from view.windows import MessageBox
+from view.windows import HouseWindow
 
 from .subframes import DataFrame
 from .subframes import MenuFrame
