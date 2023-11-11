@@ -1,0 +1,16 @@
+[project]
+name = ""
+version = ""
+description = ""
+authors = [
+    {name = "Bllagden", email = "bllagden99@gmail.com"},
+]
+dependencies = [
+    "customtkinter>=5.2.1",
+    "Pillow>=9.5.0",
+    "packaging>=23.2",
+]
+requires-python = ">=3.7"
+readme = "README.md"
+license = {text = "MIT"}
+
